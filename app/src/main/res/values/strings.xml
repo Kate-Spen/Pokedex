@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+    <string name="pokedex_tracker">Pokedex Tracker</string>
+    <string name="register_new_catch">Register new catch!</string>
+    <string name="nationalNum">National #</string>
+    <string name="name">Name</string>
+</resources>
