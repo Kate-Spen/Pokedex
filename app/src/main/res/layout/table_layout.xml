@@ -1,6 +1,326 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pokedex_tracker"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Sub Header -->
+        <TextView
+            android:id="@+id/subheadText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register_new_catch"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginBottom="32dp"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+            <!-- National Number Row -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/nationalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nationalNum"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp"/>
+
+                <EditText
+                    android:id="@+id/nationalInput"
+                    android:layout_width="0dp"
+                    android:layout_height="29dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    />
+            </TableRow>
+
+            <!-- Name Row -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/nameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp"/>
+
+                <EditText
+                    android:id="@+id/nameInput"
+                    android:layout_width="0dp"
+                    android:layout_height="29dp"
+                    android:ems="10"
+                    android:inputType="textCapWords"
+                    />
+            </TableRow>
+
+            <!-- Species Row -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/speciesText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/species"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp"/>
+
+                <EditText
+                    android:id="@+id/speciesInput"
+                    android:layout_width="0dp"
+                    android:layout_height="29dp"
+                    android:ems="10"
+                    android:inputType="textCapWords"
+                    />
+            </TableRow>
+
+            <!-- Gender Row -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/genderText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp"/>
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/femaleButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/female3"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/maleButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/male3"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/unknownButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="@string/unknown3"
+                        android:textSize="14sp" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/heightText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/height"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp"/>
+
+                <EditText
+                    android:id="@+id/heightInput"
+                    android:layout_width="0dp"
+                    android:layout_height="29dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/weightText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp"/>
+
+                <EditText
+                    android:id="@+id/weightInput"
+                    android:layout_width="0dp"
+                    android:layout_height="29dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp">
+
+                <TextView
+                    android:id="@+id/levelText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/level"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp"/>
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/baseStatsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/base_stats"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/hpText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hp"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp"/>
+
+                <EditText
+                    android:id="@+id/hpInput"
+                    android:layout_width="0dp"
+                    android:layout_height="29dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/attackText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/attack"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp"/>
+
+                <EditText
+                    android:id="@+id/attackInput"
+                    android:layout_width="0dp"
+                    android:layout_height="29dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp">
+
+                <TextView
+                    android:id="@+id/defenseText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defense"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp"/>
+
+                <EditText
+                    android:id="@+id/defenseInput"
+                    android:layout_width="0dp"
+                    android:layout_height="29dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    />
+            </TableRow>
+
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="?android:attr/buttonBarStyle">
+
+            <Button
+                android:id="@+id/resetButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/reset"
+                android:layout_marginEnd="8dp"
+                style="?android:attr/buttonBarButtonStyle"/>
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/save"
+                android:layout_marginStart="8dp"
+                style="?android:attr/buttonBarButtonStyle"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

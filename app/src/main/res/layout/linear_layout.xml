@@ -1,299 +1,323 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:fillViewport="true">
 
-    <EditText
-        android:id="@+id/defenseInput"
-        android:layout_width="209dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="458dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toEndOf="@+id/nationalText"
-        app:layout_constraintTop_toBottomOf="@+id/subheadText" />
-
-    <EditText
-        android:id="@+id/attackInput"
-        android:layout_width="209dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="416dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toEndOf="@+id/nationalText"
-        app:layout_constraintTop_toBottomOf="@+id/subheadText" />
-
-    <EditText
-        android:id="@+id/hpInput"
-        android:layout_width="209dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="374dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toEndOf="@+id/nationalText"
-        app:layout_constraintTop_toBottomOf="@+id/subheadText" />
-
-    <EditText
-        android:id="@+id/weightInput"
-        android:layout_width="209dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="224dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toEndOf="@+id/nationalText"
-        app:layout_constraintTop_toBottomOf="@+id/subheadText" />
-
-    <EditText
-        android:id="@+id/heightInput"
-        android:layout_width="209dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="184dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toEndOf="@+id/nationalText"
-        app:layout_constraintTop_toBottomOf="@+id/subheadText" />
-
-    <EditText
-        android:id="@+id/speciesInput"
-        android:layout_width="209dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="100dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toEndOf="@+id/nationalText"
-        app:layout_constraintTop_toBottomOf="@+id/subheadText" />
-
-    <EditText
-        android:id="@+id/nameInput"
-        android:layout_width="209dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="58dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toEndOf="@+id/nationalText"
-        app:layout_constraintTop_toBottomOf="@+id/subheadText" />
-
-    <TextView
-        android:id="@+id/headerText"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/pokedex_tracker"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/subheadText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/register_new_catch"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headerText" />
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pokedex_tracker"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
 
-    <TextView
-        android:id="@+id/nationalText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="106dp"
-        android:text="@string/nationalNum"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/subheadText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register_new_catch"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginBottom="32dp"/>
 
-    <TextView
-        android:id="@+id/nameText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/name"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nationalText" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
 
-    <TextView
-        android:id="@+id/speciesText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/species"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameText" />
+            <TextView
+                android:id="@+id/nationalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nationalNum"
+                android:textSize="16sp"
+                android:layout_marginEnd="16dp"/>
 
-    <TextView
-        android:id="@+id/genderText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/gender"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/speciesText" />
+            <EditText
+                android:id="@+id/nationalInput"
+                android:layout_width="0dp"
+                android:layout_height="29dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/heightText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/height"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genderText" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
 
-    <TextView
-        android:id="@+id/weightText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/weight"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heightText" />
+            <TextView
+                android:id="@+id/nameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textSize="16sp"
+                android:layout_marginEnd="16dp"/>
 
-    <TextView
-        android:id="@+id/levelText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/level"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weightText" />
+            <EditText
+                android:id="@+id/nameInput"
+                android:layout_width="0dp"
+                android:layout_height="29dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textCapWords"
+                />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/baseStatsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="73dp"
-        android:layout_marginTop="284dp"
-        android:text="@string/base_stats"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nationalText" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
 
-    <TextView
-        android:id="@+id/hpText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="83dp"
-        android:text="@string/hp"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/levelText" />
+            <TextView
+                android:id="@+id/speciesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/species"
+                android:textSize="16sp"
+                android:layout_marginEnd="16dp"/>
 
-    <TextView
-        android:id="@+id/attackText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/attack"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hpText" />
+            <EditText
+                android:id="@+id/speciesInput"
+                android:layout_width="0dp"
+                android:layout_height="29dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textCapWords"
+                />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/defenseText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/defense"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/attackText" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/resetButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="169dp"
-        android:layout_marginTop="175dp"
-        android:text="@string/reset"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/baseStatsText" />
+            <TextView
+                android:id="@+id/genderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="@string/gender"
+                android:textSize="16sp" />
 
-    <Button
-        android:id="@+id/saveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="564dp"
-        android:text="@string/save"
-        app:layout_constraintStart_toEndOf="@+id/resetButton"
-        app:layout_constraintTop_toBottomOf="@+id/headerText" />
+            <RadioGroup
+                android:id="@+id/genderGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/nationalInput"
-        android:layout_width="209dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="17dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toEndOf="@+id/nationalText"
-        app:layout_constraintTop_toBottomOf="@+id/subheadText" />
+                <RadioButton
+                    android:id="@+id/femaleButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/female"
+                    android:textSize="14sp" />
 
-    <RadioButton
-        android:id="@+id/femaleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="1dp"
-        android:text="Female"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/genderText"
-        app:layout_constraintTop_toBottomOf="@+id/speciesInput" />
+                <RadioButton
+                    android:id="@+id/maleButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/male"
+                    android:textSize="14sp" />
 
-    <RadioButton
-        android:id="@+id/maleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:text="Male"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/femaleButton"
-        app:layout_constraintTop_toBottomOf="@+id/speciesInput" />
+                <RadioButton
+                    android:id="@+id/unknownButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="@string/unknown" />
+            </RadioGroup>
+        </LinearLayout>
 
-    <RadioButton
-        android:id="@+id/unknownButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:text="Unknown"
-        app:layout_constraintStart_toEndOf="@+id/maleButton"
-        app:layout_constraintTop_toBottomOf="@+id/speciesInput" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
 
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="357dp" />
+            <TextView
+                android:id="@+id/heightText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/height"
+                android:textSize="16sp"
+                android:layout_marginEnd="16dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:id="@+id/heightInput"
+                android:layout_width="0dp"
+                android:layout_height="29dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/weightText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight"
+                android:textSize="16sp"
+                android:layout_marginEnd="16dp"/>
+
+            <EditText
+                android:id="@+id/weightInput"
+                android:layout_width="0dp"
+                android:layout_height="29dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:id="@+id/levelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/level"
+                android:textSize="16sp"
+                android:layout_marginEnd="16dp"/>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/baseStatsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/base_stats"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/hpText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hp"
+                android:textSize="16sp"
+                android:layout_marginEnd="16dp"/>
+
+            <EditText
+                android:id="@+id/hpInput"
+                android:layout_width="0dp"
+                android:layout_height="29dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/attackText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/attack"
+                android:textSize="16sp"
+                android:layout_marginEnd="16dp"/>
+
+            <EditText
+                android:id="@+id/attackInput"
+                android:layout_width="0dp"
+                android:layout_height="29dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:id="@+id/defenseText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/defense"
+                android:textSize="16sp"
+                android:layout_marginEnd="16dp"/>
+
+            <EditText
+                android:id="@+id/defenseInput"
+                android:layout_width="0dp"
+                android:layout_height="29dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/resetButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/reset"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/save"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

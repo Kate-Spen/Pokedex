@@ -15,4 +15,13 @@
     <string name="defense">Defense</string>
     <string name="reset">Reset</string>
     <string name="save">Save</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="unknown">Unknown</string>
+    <string name="female2">Female</string>
+    <string name="male2">Male</string>
+    <string name="unknown2">Unknown</string>
+    <string name="unknown3">Unknown</string>
+    <string name="male3">Male</string>
+    <string name="female3">Female</string>
 </resources>
