@@ -8,7 +8,62 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/defenseInput"
+        android:layout_width="209dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="458dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@+id/nationalText"
+        app:layout_constraintTop_toBottomOf="@+id/subheadText" />
+
+    <EditText
+        android:id="@+id/attackInput"
+        android:layout_width="209dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="416dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@+id/nationalText"
+        app:layout_constraintTop_toBottomOf="@+id/subheadText" />
+
+    <EditText
+        android:id="@+id/hpInput"
+        android:layout_width="209dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="374dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@+id/nationalText"
+        app:layout_constraintTop_toBottomOf="@+id/subheadText" />
+
+    <EditText
+        android:id="@+id/weightInput"
+        android:layout_width="209dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="224dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@+id/nationalText"
+        app:layout_constraintTop_toBottomOf="@+id/subheadText" />
+
+    <EditText
+        android:id="@+id/heightInput"
+        android:layout_width="209dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="184dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@+id/nationalText"
+        app:layout_constraintTop_toBottomOf="@+id/subheadText" />
+
+    <EditText
+        android:id="@+id/speciesInput"
         android:layout_width="209dp"
         android:layout_height="29dp"
         android:layout_marginStart="35dp"
@@ -19,7 +74,7 @@
         app:layout_constraintTop_toBottomOf="@+id/subheadText" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/nameInput"
         android:layout_width="209dp"
         android:layout_height="29dp"
         android:layout_marginStart="35dp"
@@ -194,7 +249,7 @@
         app:layout_constraintTop_toBottomOf="@+id/headerText" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/nationalInput"
         android:layout_width="209dp"
         android:layout_height="29dp"
         android:layout_marginStart="35dp"
@@ -203,5 +258,42 @@
         android:inputType="textPassword"
         app:layout_constraintStart_toEndOf="@+id/nationalText"
         app:layout_constraintTop_toBottomOf="@+id/subheadText" />
+
+    <RadioButton
+        android:id="@+id/femaleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="1dp"
+        android:text="Female"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/genderText"
+        app:layout_constraintTop_toBottomOf="@+id/speciesInput" />
+
+    <RadioButton
+        android:id="@+id/maleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="Male"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/femaleButton"
+        app:layout_constraintTop_toBottomOf="@+id/speciesInput" />
+
+    <RadioButton
+        android:id="@+id/unknownButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="Unknown"
+        app:layout_constraintStart_toEndOf="@+id/maleButton"
+        app:layout_constraintTop_toBottomOf="@+id/speciesInput" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="357dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
